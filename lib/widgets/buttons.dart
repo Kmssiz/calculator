@@ -24,7 +24,7 @@ class MyButton extends StatelessWidget {
             child: Center(
                 child: isIcon
                     ? SizedBox(
-                        height: 30,
+                        height: 28,
                         child: Image.asset(
                           'assets/$text.png',
                           color: textColor,
@@ -32,7 +32,7 @@ class MyButton extends StatelessWidget {
                       )
                     : Text(
                         text,
-                        style: TextStyle(color: textColor, fontSize: 30),
+                        style: TextStyle(color: textColor, fontSize: 25),
                       )),
           )),
     );

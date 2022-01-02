@@ -24,6 +24,10 @@ class _DisplayNumberState extends State<DisplayNumber> {
     '5',
     '6',
     '-',
+    '1',
+    '2',
+    '3',
+    '+',
     'undo',
     '0',
     '.',
@@ -36,28 +40,24 @@ class _DisplayNumberState extends State<DisplayNumber> {
       child: Column(
         children: [
           Expanded(
-            child: Container(
-              color: Colors.blue,
-            ),
+            child: Container(),
           ),
           Expanded(
-            flex: 3,
-            child: Container(
-              child: GridView.builder(
-                  itemCount: buttons.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4),
-                  itemBuilder: (context, index) {
-                    return MyButton(
-                        color: (themeProvider.isDarkMode)
-                            ? const Color(0xFF282b33)
-                            : const Color(0xFFf7f7f7),
-                        text: buttons[index],
-                        textColor: chooseColor(
-                            themeProvider.isDarkMode, buttons[index]),
-                        isIcon: isIcon(buttons[index]));
-                  }),
-            ),
+            flex: 8,
+            child: GridView.builder(
+                itemCount: buttons.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4),
+                itemBuilder: (context, index) {
+                  return MyButton(
+                      color: (themeProvider.isDarkMode)
+                          ? const Color(0xFF282b33)
+                          : const Color(0xFFf7f7f7),
+                      text: buttons[index],
+                      textColor:
+                          chooseColor(themeProvider.isDarkMode, buttons[index]),
+                      isIcon: isIcon(buttons[index]));
+                }),
           ),
         ],
       ),

@@ -15,7 +15,7 @@ class _ModeSwitchState extends State<ModeSwitch> {
     var themeProvider = Provider.of<ThemeProvider>(context);
     bool isSelected = themeProvider.isDarkMode;
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(8.0),
       child: Center(
         child: Container(
           width: MediaQuery.of(context).size.width * 0.30,
