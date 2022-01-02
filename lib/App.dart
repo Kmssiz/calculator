@@ -18,9 +18,13 @@ class MyApp extends StatelessWidget {
       title: 'Calculatrice',
       home: SafeArea(
         child: Scaffold(
-            body: Column(
-          children: [const ModeSwitch(), DisplayNumber()],
-        )),
+          body: Column(
+            children: const [
+              ModeSwitch(),
+              DisplayNumber(),
+            ],
+          ),
+        ),
       ),
     );
   }

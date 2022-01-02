@@ -37,7 +37,7 @@ class AppTheme {
   );
 
   static ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: const Color(0xFF0F1828),
+    scaffoldBackgroundColor: const Color(0xFF22252d),
     backgroundColor: const Color(0xFFFFFFFF),
     primaryColor: const Color(0xFFbdbec0),
     accentColor: const Color(0xFFbdbec0),

@@ -18,12 +18,12 @@ class _ModeSwitchState extends State<ModeSwitch> {
       padding: const EdgeInsets.all(20.0),
       child: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.40,
+          width: MediaQuery.of(context).size.width * 0.30,
           height: MediaQuery.of(context).size.height * 0.09,
           decoration: BoxDecoration(
               color: (themeProvider.isDarkMode)
-                  ? const Color(0xFF363e3c)
-                  : const Color(0xFFdfdede),
+                  ? const Color(0xFF2a2d37)
+                  : const Color(0xFFf9f9f9),
               borderRadius: const BorderRadius.all(Radius.circular(25))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -33,7 +33,7 @@ class _ModeSwitchState extends State<ModeSwitch> {
                   themeProvider.toogleTheme(isOn: true);
                 },
                 child: SizedBox(
-                  height: 40,
+                  height: 30,
                   child: Image.asset(
                     'assets/bright.png',
                     color: isSelected ? Colors.grey : const Color(0xFF0F1828),
@@ -45,7 +45,7 @@ class _ModeSwitchState extends State<ModeSwitch> {
                   themeProvider.toogleTheme(isOn: false);
                 },
                 child: SizedBox(
-                  height: 35,
+                  height: 25,
                   child: Image.asset(
                     'assets/sleep-mode.png',
                     color: isSelected ? Colors.white : Colors.grey,
