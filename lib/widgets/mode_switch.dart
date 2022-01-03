@@ -18,8 +18,8 @@ class _ModeSwitchState extends State<ModeSwitch> {
       padding: const EdgeInsets.all(8.0),
       child: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.30,
-          height: MediaQuery.of(context).size.height * 0.09,
+          width: MediaQuery.of(context).size.width * 0.25,
+          height: MediaQuery.of(context).size.height * 0.07,
           decoration: BoxDecoration(
               color: (themeProvider.isDarkMode)
                   ? const Color(0xFF2a2d37)

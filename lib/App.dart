@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: themeProvider.themeMode,
       debugShowCheckedModeBanner: false,
-      title: 'Calculatrice',
+      title: 'Calculator',
       home: SafeArea(
         child: Scaffold(
           body: Column(
