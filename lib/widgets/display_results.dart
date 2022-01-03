@@ -92,12 +92,15 @@ class _DisplayNumberState extends State<DisplayNumber> {
                               computingText = '';
                               resultsText = '';
                             } else if (buttons[index] == 'plus_minus') {
-                            } else if (buttons[index] == 'diviser' ||
-                                buttons[index] == 'X' ||
+                            } else if (buttons[index] == 'X' ||
                                 buttons[index] == '-' ||
                                 buttons[index] == '+') {
-                              textColor = const Color(0xFFcc6e6f);
-                              computingText += buttons[index];
+                              if (resultsText.isNotEmpty) {
+                                computingText = resultsText + buttons[index];
+                                resultsText = '';
+                              } else {
+                                computingText += buttons[index];
+                              }
                             } else if (buttons[index] == 'C') {
                               if (computingText.isEmpty) {
                               } else {
@@ -106,6 +109,13 @@ class _DisplayNumberState extends State<DisplayNumber> {
                               }
                             } else if (buttons[index] == '=') {
                               equalPressed();
+                            } else if (buttons[index] == 'diviser') {
+                              if (resultsText.isNotEmpty) {
+                                computingText = resultsText + '/';
+                                resultsText = '';
+                              } else {
+                                computingText += '/';
+                              }
                             } else {
                               computingText += buttons[index];
                             }
